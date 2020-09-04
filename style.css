@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  background: rgb(124, 201, 224);
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.speak {
+  margin-top: 20%;
+  border: 2px solid #4e4e4e;
+  border-radius: 7px;
+  padding: 10px 70px;
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  transition: all 0.5s;
+  text-align: center;
+}
+
+.text {
+  font-size: 30px;
+  margin-top: 40%;
+  overflow: hidden;
+  position: fixed;
+}
+@media screen and (max-width: 780px) {
+  .text {
+    margin-top: 60%;
+  }
+}
+
+.speak span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.speak span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.speak:hover span {
+  padding-right: 25px;
+}
+
+.speak:hover span:after {
+  opacity: 1;
+  right: 0;
+}
